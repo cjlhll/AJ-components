@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition name="bounce">
     <div v-show="showToast" class="aj-toast">
       {{text}}
     </div>

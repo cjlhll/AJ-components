@@ -19,6 +19,9 @@
     <hr>
     <p>stepper</p>
     <stepper></stepper>
+    <hr>
+    <p>toast</p>
+    <button @click="testToast">测试Toast</button>
   </div>
 </template>
 
@@ -57,6 +60,9 @@
     methods:{
       jigsawSuccess(){
         console.log('验证成功');
+      },
+      testToast(){
+        this.$Toast.open('测试Toast');
       }
     },
     components: {
