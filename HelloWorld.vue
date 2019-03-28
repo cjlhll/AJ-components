@@ -16,6 +16,9 @@
     <div style="padding: 20px;">
       <jigsaw-code @on-success="jigsawSuccess" slide-text="滑动来验证"></jigsaw-code>
     </div>
+    <hr>
+    <p>stepper</p>
+    <stepper></stepper>
   </div>
 </template>
 
@@ -25,6 +28,7 @@
   import Lottery from './lottery'
   import PwdInput from './passwordInput/pwdInput'
   import JigsawCode from './jigsawCode'
+  import Stepper from './stepper'
 
   export default {
     name: 'HelloWorld',
@@ -60,7 +64,8 @@
       CountDownButton,
       Lottery,
       PwdInput,
-      JigsawCode
+      JigsawCode,
+      Stepper
     }
   }
 </script>

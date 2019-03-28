@@ -1,8 +1,12 @@
 <template>
   <div class="stepper-box" :class="{large}" :style="{borderColor:color}">
-    <button :style="{background:color}" @click="addOrReduce(-1)" class="iconfont icon-jian"></button>
+    <button :style="{background:color}" @click="addOrReduce(-1)" :disabled="curCount===min">
+      <img src="./reduce.png" alt="">
+    </button>
     <input type="number" :placeholder="placeholder" :value="curCount" @input="enterValue" @blur="inputBlur">
-    <button :style="{background:color}" @click="addOrReduce(1)" class="iconfont icon-jia"></button>
+    <button :style="{background:color}" @click="addOrReduce(1)" :disabled="curCount===max">
+      <img src="./add.png" alt="">
+    </button>
   </div>
 </template>
 
@@ -115,27 +119,39 @@
   .stepper-box{
     display: flex;
     border: 1px solid #EA454B;
-    height: px2rem(40px);
+    height: 40px;
     justify-content: space-between;
+    box-sizing: border-box;
     &.large{
-      height: px2rem(35px);
+      height: 35px;
     }
     input{
       /*width: px2rem(40px);*/
-      width: px2rem(115px);
+      width: 115px;
       flex: 1;
       text-align: center;
+      height: 100%;
+      border: none;
+      box-sizing: border-box;
+      font-size: 16px;
     }
     button{
       border: none;
       margin: 0;
       flex: 1;
-      font-size: px2rem(16px);
+      font-size: 16px;
       padding: 0;
       color: #fff!important;
       text-align: center;
       background: #EA454B;
-      &:active{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      img{
+        width: 20px;
+        height: 20px;
+      }
+      &:active,&:disabled{
         opacity: .5;
       }
     }
