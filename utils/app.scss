@@ -1,0 +1,7 @@
+@function px2rem ($px) {
+  $rem: 37.5px;
+  @return ($px / $rem) +rem;
+}
+
+$borderColor:#ccc;
+$borderRadius:px2rem(10px);
