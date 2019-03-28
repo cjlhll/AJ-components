@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pwd-input-container">
     <div class="inputs-box">
       <ul class="clearfix" :style="{borderColor,borderWidth}" @click.stop.prevent="showKeyboard=true">
         <li v-for="(i,index) in 6" :key="i" :style="{borderColor,borderWidth}"><span
@@ -86,17 +86,26 @@
 </script>
 
 <style scoped lang="scss">
+  @import '../utils/app';
+  .pwd-input-container{
+    position: relative;
+    min-height: 400px;
+  }
   .inputs-box{
-    padding: 0 px2rem(15px);
+
+    padding: 0 15px;
     ul {
-      border: 1px solid #ccc;
+      border: 1px solid $borderColor;
       border-radius: 5px;
       display: flex;
-
+      list-style: none;
+      padding: 0;
       li {
+        padding: 0;
+        list-style: none;
         flex: 1;
         height: 50px;
-        border-right: 1px solid #ccc;
+        border-right: 1px solid $borderColor;
         text-align: center;
         line-height: 60px;
 
@@ -121,6 +130,7 @@
     /*border: 1px solid red;*/
     position: absolute;
     bottom: 0;
+    left: 0;
     z-index: 999;
     background: #fff;
     /*box-shadow: 0 px2rem(-1px) px2rem(10px) 0 rgba(0,0,0,.1);*/
@@ -130,24 +140,27 @@
         clear: both;
     }*/
     .keyboard-top-bar{
-      height: px2rem(40px);
-      border-top: 1px solid #ccc;
+      height: 30px;
+      border-top: 1px solid $borderColor;
+      padding:5px 10px;
       button{
-        width: px2rem(80px);
+        height: 100%;
         float: right;
-        height: px2rem(30px);
+        width: 50px;
         background: #d1d4dd;
         border: none;
-        margin: px2rem(5px) px2rem(5px) 0 0;
-        border-radius: px2rem(5px);
+        border-radius: 5px;
+        box-sizing: border-box;
         &:active{
           opacity: .5;
         }
       }
     }
     ul {
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
+      padding: 0;
     }
 
     $width: 100%;
@@ -156,12 +169,13 @@
       width: $width/3;
       box-sizing: border-box;
       height: 50px;
-      border-right: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
+      border-right: 1px solid $borderColor;
+      border-bottom: 1px solid $borderColor;
       font-weight: bold;
+      list-style: none;
 
       &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-        border-top: 1px solid #ccc;
+        border-top: 1px solid $borderColor;
       }
 
       &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12) {
