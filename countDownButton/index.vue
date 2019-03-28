@@ -59,18 +59,19 @@
   }
 </script>
 
+
 <style scoped lang="scss">
   @import '../utils/app.scss';
   a{
     display: inline-block;
     border: 1px solid $borderColor;
-    padding: px2rem(10px) px2rem(20px);
+    padding: 5px 20px;
     text-decoration: none;
-    font-size: px2rem(12px);
+    font-size: 14px;
     color: #0193de;
     border-radius: $borderRadius;
     &.disalbed{
-    opacity: .5;
-  }
+      opacity: .5;
+    }
   }
 </style>

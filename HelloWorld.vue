@@ -6,8 +6,11 @@
     <p>countDownButton</p>
     <count-down-button v-model="smsStatus" :count="20" @send-sms="smsStatus=true">发送验证码</count-down-button>
     <hr>
-    <p>luckyWheel</p>
+    <p>lottery</p>
     <lottery :data="prizeData" show-key="name" @onstart="prizeData.target=5" @onstop="prizeData.target=''"></lottery>
+    <hr>
+    <p>passwordInput</p>
+    <pwd-input></pwd-input>
   </div>
 </template>
 
@@ -15,6 +18,7 @@
   import AutoComplete from './autoComplete'
   import CountDownButton from './countDownButton'
   import Lottery from './lottery'
+  import PwdInput from './passwordInput/pwdInput'
 
   export default {
     name: 'HelloWorld',
@@ -43,7 +47,8 @@
     components: {
       AutoComplete,
       CountDownButton,
-      Lottery
+      Lottery,
+      PwdInput
     }
   }
 </script>

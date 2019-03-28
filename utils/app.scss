@@ -1,7 +1,33 @@
 @function px2rem ($px) {
-  $rem: 37.5px;
+  $rem: 50px;
   @return ($px / $rem) +rem;
 }
 
 $borderColor:#ccc;
-$borderRadius:px2rem(10px);
+$borderRadius:10px;
+
+
+/*清除一些html默认样式*/
+body, ul, li, p, dl, dt, dd, label, span, h1, h2, h3, h4, h5, h6,button {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+i{
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: #000;
+  /*&.link{
+    color: #000;
+  }*/
+}
+img {
+  border: none;
+  width: 100%;
+}

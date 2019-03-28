@@ -84,7 +84,7 @@
   @import '../utils/app';
   .container-box {
     width: 100%;
-    height: px2rem(60px);
+    height: 40px;
     border: 1px solid #ccc;
     position: relative;
     box-sizing: border-box;
@@ -101,13 +101,13 @@
       background: #fff;
       width: 100%;
       box-sizing: border-box;
-      height: px2rem(200px);
+      height: 200px;
       overflow: auto;
       z-index: 999;
-      box-shadow: 0 px2rem(2px) px2rem(5px) px2rem(2px) rgba(0,0,0,.1);
+      box-shadow: 0 2px 5px 2px rgba(0,0,0,.1);
       li {
-        padding: 0 px2rem(10px);
-        line-height: px2rem(40px);
+        padding: 0 10px;
+        line-height: 40px;
         display: flex;
         justify-content: space-between;
         span{
@@ -120,10 +120,10 @@
     }
     .iconfont{
       position: absolute;
-      right: px2rem(10px);
+      right: 10px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: px2rem(15px)!important;
+      font-size: 15px!important;
       /*transition: all .5s;*/
       &.active{
         transform: translateY(-50%) rotate(-180deg);
