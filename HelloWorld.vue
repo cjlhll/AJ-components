@@ -11,6 +11,11 @@
     <hr>
     <p>passwordInput</p>
     <pwd-input></pwd-input>
+    <hr>
+    <p>jigsawCode</p>
+    <div style="padding: 20px;">
+      <jigsaw-code @on-success="jigsawSuccess" slide-text="滑动来验证"></jigsaw-code>
+    </div>
   </div>
 </template>
 
@@ -19,6 +24,7 @@
   import CountDownButton from './countDownButton'
   import Lottery from './lottery'
   import PwdInput from './passwordInput/pwdInput'
+  import JigsawCode from './jigsawCode'
 
   export default {
     name: 'HelloWorld',
@@ -44,11 +50,17 @@
         },
       }
     },
+    methods:{
+      jigsawSuccess(){
+        console.log('验证成功');
+      }
+    },
     components: {
       AutoComplete,
       CountDownButton,
       Lottery,
-      PwdInput
+      PwdInput,
+      JigsawCode
     }
   }
 </script>
