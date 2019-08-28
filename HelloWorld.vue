@@ -34,6 +34,7 @@
   import Stepper from './stepper'
 
   export default {
+
     name: 'HelloWorld',
     data() {
       return {
